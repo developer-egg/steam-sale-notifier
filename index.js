@@ -5,8 +5,8 @@ const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken);
 
-// must be lowercase and no spaces
-const gameID = process.argv[2]
+// hardcoding for now, since certain hosters do not allow args
+const gameID = 1238810
 let gameName = ""
 
 axios.get(`https://private-anon-7572593235-itad.apiary-proxy.com/v02/game/plain/?key=${process.env.ITAD_API_KEY}&shop=steam&game_id=app%2F${gameID}`)
